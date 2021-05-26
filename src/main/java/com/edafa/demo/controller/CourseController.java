@@ -24,12 +24,17 @@ public class CourseController {
 
     @GetMapping("/courses")
     public List getAllCourses(){
-        return courseService.getAllCourses();
+        if(UserRequestHandler.requestFlag)
+        {return courseService.getAllCourses();}
+        else return Arrays.asList("You exceeded your request limit");
     }
 
     @PostMapping("/course")
     public String addNewInstructor(@RequestBody Course course){
-        return courseService.registerNewCourse(course);
+
+        if(UserRequestHandler.requestFlag)
+        {return courseService.registerNewCourse(course);}
+        else return ("You exceeded your request limit");
     }
 
 

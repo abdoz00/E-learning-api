@@ -22,7 +22,7 @@ public class UserController {
         if (UserRequestHandler.requestFlag)
             return activeUserStore.getUsers();
         else {
-            return Arrays.asList(new String[]{"You exceeded your request limit"});
+            return Arrays.asList("You exceeded your request limit");
         }
     }
 }
