@@ -1,17 +1,12 @@
 package com.edafa.demo.controller;
 
-import com.edafa.demo.dao.InstructorRepo;
 import com.edafa.demo.entity.Student;
-import com.edafa.demo.service.CourseService;
-import com.edafa.demo.service.InstructorService;
 import com.edafa.demo.service.StudentService;
 import com.edafa.demo.user.UserRequestHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
 
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 

@@ -1,6 +1,5 @@
 package com.edafa.demo.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -12,7 +11,7 @@ import java.util.List;
 public class Course implements Serializable {
     @Id
     @Column
-    private int id;
+    private long id;
     @Column
     private String name;
     @Column
@@ -48,7 +47,7 @@ public class Course implements Serializable {
 
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

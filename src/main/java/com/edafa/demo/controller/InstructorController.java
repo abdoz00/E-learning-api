@@ -1,7 +1,6 @@
 package com.edafa.demo.controller;
 
 import com.edafa.demo.entity.Instructor;
-import com.edafa.demo.entity.Student;
 import com.edafa.demo.service.InstructorService;
 import com.edafa.demo.user.UserRequestHandler;
 import org.springframework.beans.factory.annotation.Autowired;

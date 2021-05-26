@@ -1,6 +1,5 @@
 package com.edafa.demo.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -13,7 +12,7 @@ public class Student {
 
    @Id
    @Column
-   private int id;
+   private long id;
    @Column
    private String name;
    @Column
@@ -35,11 +34,11 @@ public class Student {
       this.courses = courses;
    }
 
-   public int getId() {
+   public long getId() {
       return id;
    }
 
-   public void setId(int id) {
+   public void setId(long id) {
       this.id = id;
    }
 

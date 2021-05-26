@@ -7,10 +7,10 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +38,7 @@ public class UserAspect {
         userRequests=UserRequestHandler.getUserRequests();
         System.out.println(userRequests);
 
-        if (activeUsers.size()==0){return;}
+        if (activeUsers.size()==0 || activeUsers.get(0).equals("admin")){return;}
 
         temp=userRequests.get(activeUsers.get(0));
         max=(int)temp.get(RequestEnum.MAX);

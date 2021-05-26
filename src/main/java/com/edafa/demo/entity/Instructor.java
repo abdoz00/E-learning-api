@@ -11,7 +11,7 @@ public class Instructor {
 
     @Id
     @Column
-    private int id;
+    private long id;
     @Column
     private String name;
     @Column
@@ -29,7 +29,7 @@ public class Instructor {
         this.courses = courses;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
